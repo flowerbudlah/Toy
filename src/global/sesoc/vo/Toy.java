@@ -42,54 +42,38 @@ public class Toy implements Serializable {
 		this.price = price;
 	}
 
+	
+	
+	
 	//상위메뉴의 Source > Generate toString()...
 	@Override
 	public String toString() {
 		return "[고유번호 = " + serialNum + ", 이름 = " + name + ", 가격 = " + priceToString(price) + "원";
 	}
 	
-	
-	
-	
 	//3000000(integer) -> 3,000,000
 	public String priceToString(int price) { //장난감의 가격을 숫자(Interger)에서 최종적으로 문자열로 변환하고자 
 		String sPrice = Integer.toString(price); 
-		ArrayList<String> pList = new ArrayList<>();
+		ArrayList<String> pList = new ArrayList<>(); 
 		
-		for(int i=sPrice.length(); i>0; i-=3) {
-			String pricePart = null;
-			if() {
-				
+		for(int i=sPrice.length(); i>0; i-=3){
+			String pricePart = null; 
+			if(i<=3){
+				pricePart = sPrice.substring(0, i);  
 			} else {
-				
-			} 
-			
-			
-		
-			
+				pricePart = sPrice.substring(i-3, i); 
+			}
+			pList.add(pricePart);
 		}
-	
 		
-		return newPrice; 
+		String newPrice = ""; 
+		for(int i=pList.size()-1; i>=0; i--) {
+			if(i==0) {	newPrice += pList.get(i);
+			}else{	newPrice += pList.get(i) + ",";
+			}
+		}
+		return newPrice;
 	}
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

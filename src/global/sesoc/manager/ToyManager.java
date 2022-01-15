@@ -5,7 +5,7 @@ import java.util.List;
 import global.sesoc.vo.Toy;
 
 public interface ToyManager {
-		/**
+	/**
 	 * 전달받은 Toy 객체를 List에 추가
 	 * @param list에 추가할 Toy객체
 	 * @return 추가여부 
