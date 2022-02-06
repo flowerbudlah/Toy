@@ -1,9 +1,8 @@
 package global.sesoc.vo;
 
-public class Bicycle extends Toy{
-	
+public class Bicycle extends Toy {
 	private String type;
-
+	
 	public Bicycle(String serialNum, String name, int price, String type) {
 		super(serialNum, name, price);
 		this.type = type;
@@ -20,8 +19,7 @@ public class Bicycle extends Toy{
 	@Override
 	public String toString() {
 		return "[자전거]\t" +  super.toString() + ", 종류=" + type + "]";
-	} 
-	
+	}
 }
 
 
